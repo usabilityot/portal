@@ -1,14 +1,14 @@
 /* Global rules */
 .topnav {
     margin: auto;
-    background-color: rgb(95,95,95);
+    background-color: var(--color-primary);
     overflow: auto;
 }
 
 .topnav a {
     float: left;
     display: block;
-    color: whitesmoke;
+    color: var(--color-bg);
     text-align: center;
     padding: 12px 12px;
     text-decoration: none;
@@ -16,8 +16,10 @@
     font-size: 16px;
 }
 
-.topnav a.hover, .active {
-    background-color: darkcyan;
+.topnav a:hover,
+.topnav a.active {
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
 }
 
 .topnav .icon {
@@ -34,6 +36,7 @@
     .topnav a.icon {
         float: right;
         display: block;
+        color: var(--color-bg);
     }
     
     .topnav.responsive {
