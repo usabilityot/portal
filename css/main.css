@@ -1,34 +1,45 @@
 /* Global rules */
 
+:root {
+    --color-bg: #ffffff;
+    --color-surface: #F5F6F5;
+    --color-text: #243238;
+    --color-border: #B7C1C4;
+    --color-primary: #0F6B78;
+    --color-secondary: #E87D72;
+    --color-accent: #E8B44C;
+    --color-muted: #5A7076;
+}
+
 html {
-    background-color: whitesmoke;
+    background-color: var(--color-surface);
     font-size: 0.95em;
 }
 
 body {
     font-family: system-ui, -apple-system, sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     margin: 0 auto;
     padding: 20px;
     max-width:1200px;
   }
 
 ::selection {
-    color: #000; 
-    background: #ff0;
+    color: var(--color-bg);
+    background: var(--color-secondary);
 }
 
 h1 {
     font-weight: normal;
     margin: auto;
-    background: #fff;
+    background: var(--color-bg);
     line-height: 2.5em;
 }
 
 main.wrapper {
-    background-color: white;
+    background-color: var(--color-bg);
     overflow: auto;
 }
 
@@ -43,13 +54,13 @@ h2,h3 {
 }
 
 a {
-    color:darkcyan;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
 a:hover {
-    color: whitesmoke;
-    background-color: darkcyan;
+    color: var(--color-bg);
+    background-color: var(--color-primary);
     text-decoration: none;
 }
 
@@ -134,8 +145,8 @@ footer {
     flex-direction: row; /* Default layout: Image left, text right */
     align-items: center;
     gap: 30px;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
     border-radius: 12px; /* Smooth rounded corners */
     padding: 24px;
     margin-bottom: 30px;
@@ -162,7 +173,7 @@ footer {
     height: 150px;
     object-fit: cover; /* Forces screenshots to crop nicely instead of squishing */
     border-radius: 8px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid var(--color-border);
   }
   
   /* Content & CTA Link Elements */
@@ -172,7 +183,7 @@ footer {
   
   .project-content h2 {
     margin-top: 0;
-    color: #1e293b;
+    color: var(--color-primary);
   }
   
   .project-links {
@@ -193,22 +204,23 @@ footer {
   }
   
   .demo-btn {
-    background-color: darkcyan;
-    color: #ffffff;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
   }
   
   .demo-btn:hover {
-    background-color: rgb(95, 95, 95);
+    background-color: var(--color-secondary);
   }
   
   .repo-btn {
-    background-color: #f1f5f9;
-    color: #334155;
-    border: 1px solid #cbd5e1;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
   }
   
   .repo-btn:hover {
-    background-color: rgb(95, 95, 95);
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
   }
   
   /* Responsive Overrides: If screen is small, stack everything vertically */
